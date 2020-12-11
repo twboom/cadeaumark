@@ -18,5 +18,6 @@ function newLine () {
 document.getElementById("input").onkeypress = function(event){
                 if (event.keyCode == 13 || event.which == 13){
                     newLine();
+                    window.scrollTo(0,document.body.scrollHeight);
                 }
             }
