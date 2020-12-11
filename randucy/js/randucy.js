@@ -2,17 +2,17 @@ var input = document.querySelector('#input');
 
 function newLine () {
   // create a new div element
-  const newDiv = document.createElement('p');
+  const newLineElement = document.createElement('p');
 
   // and give it some content
-  const newContent = document.createTextNode(input.value);
+  const outputContent = document.createTextNode(input.value);
 
   // add the text node to the newly created div
-  newDiv.appendChild(newContent);
+  newLineElement.appendChild(outputContent);
 
   // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById('p');
-  document.body.insertBefore(newDiv, currentDiv);
+  const parent = document.querySelector('#outputField');
+  document.querySelector('#output').insertBefore(newLineElement, parent);
 }
 
 document.getElementById("input").onkeypress = function(event){
