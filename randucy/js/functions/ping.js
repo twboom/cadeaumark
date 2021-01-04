@@ -2,7 +2,7 @@ var input = document.querySelector('#input');
 
 function ping () {
   if (input == 'ping') {
-        console.log('pong')
+        console.log('pong');
         return
       }
 }

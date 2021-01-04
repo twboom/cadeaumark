@@ -2,15 +2,23 @@
 
 :root {
   --font: 'Source Code Pro';
+  --txt: white
+}
+
+html {
+  background-color: black;
 }
 
 p {
   font-family: var(--font);
+  color: var(--txt);
 }
 
 input {
   font-family: var(--font);
   border: none;
+  color: var(--txt);
+  background-color: black;
 }
 
 input:focus {
