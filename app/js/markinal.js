@@ -16,7 +16,7 @@ function newCommandLine(cmdOut) {
   newLineElement.appendChild(outputContent);
   const parent = document.querySelector('#outputField');
   document.querySelector('#output').insertBefore(newLineElement, parent);
-  console.log('ran' + ' ' + cmdOut)
+  console.log('Markinal' + ' ' + cmdOut)
 };
 
 function newCmdNotFoundLine(cmdNotFound) {
@@ -25,7 +25,7 @@ function newCmdNotFoundLine(cmdNotFound) {
   newLineElement.appendChild(outputContent);
   const parent = document.querySelector('#outputField');
   document.querySelector('#output').insertBefore(newLineElement, parent);
-  console.log('ran' + ' ' + input.value + ':' + ' ' + 'command not found')
+  console.log('Markinal' + ' ' + input.value + ':' + ' ' + 'command not found')
 }
 
 document.getElementById("input").onkeypress = function(event){
