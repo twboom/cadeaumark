@@ -1,5 +1,9 @@
 function runFunction() {
-  if (input.value == 'ping') {
-    ping();
+  switch (input.value) {
+    case 'ping':
+      ping();
+      break;
+    default:
+      console.log('No function found');
   }
 }
