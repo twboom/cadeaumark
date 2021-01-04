@@ -9,4 +9,4 @@ function help() {
   newCommandLine('help no')
 }
 
-document.onload = console.log('Randucy basic functions are ready')
+document.onload = console.log('Markinal basic functions are ready')
