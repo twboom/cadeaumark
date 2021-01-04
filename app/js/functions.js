@@ -6,10 +6,15 @@ function runFunction() {
       ping();
       break;
 
-    // help help command
+    // help command
     case 'help':
       help();
       break;
+
+    // login command
+    case 'login':
+      login()
+      break
 
     default:
       newCmdNotFoundLine('Markinal:' + ' ' + 'Command not found' + ' ' + input.value);
