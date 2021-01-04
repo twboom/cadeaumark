@@ -1,5 +1,9 @@
 function runFunction() {
-  switch (input.value) {
+
+  let args = input.value.slice(0).trim().split(/ +/g);
+  let command = args.shift().toLowerCase();
+
+  switch (command) {
 
     // ping command
     case 'ping':
@@ -13,7 +17,13 @@ function runFunction() {
 
     // login command
     case 'login':
-      login()
+      login();
+      break;
+
+
+    // logout command
+    case 'logout':
+      logout();
       break
 
     default:
