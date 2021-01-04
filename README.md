@@ -1,2 +1,2 @@
-# RanDucy
-RanDucy is a customizable terminal in JavaScript!
+# Cadeau Mark
+Gefeliciteerd met je 18e verjaardag!
