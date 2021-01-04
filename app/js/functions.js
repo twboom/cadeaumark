@@ -12,6 +12,6 @@ function runFunction() {
       break;
 
     default:
-      newCmdNotFoundLine('ran:' + ' ' + 'Command not found' + ' ' + input.value);
+      newCmdNotFoundLine('Markinal:' + ' ' + 'Command not found' + ' ' + input.value);
   }
 }
