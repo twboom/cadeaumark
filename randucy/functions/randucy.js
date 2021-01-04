@@ -5,4 +5,8 @@ function ping () {
         newCommandLine('pong')
 }
 
-document.onload = console.log('Ping is ready')
+function help() {
+  newCommandLine('help no')
+}
+
+document.onload = console.log('Randucy basic functions are ready')

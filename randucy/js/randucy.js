@@ -16,8 +16,17 @@ function newCommandLine(cmdOut) {
   newLineElement.appendChild(outputContent);
   const parent = document.querySelector('#outputField');
   document.querySelector('#output').insertBefore(newLineElement, parent);
-  console.log(cmdOut.value)
+  console.log('ran' + ' ' + cmdOut)
 };
+
+function newCmdNotFoundLine(cmdNotFound) {
+  const newLineElement = document.createElement('p');
+  const outputContent = document.createTextNode(cmdNotFound);
+  newLineElement.appendChild(outputContent);
+  const parent = document.querySelector('#outputField');
+  document.querySelector('#output').insertBefore(newLineElement, parent);
+  console.log('ran' + ' ' + input.value + ':' + ' ' + 'command not found')
+}
 
 document.getElementById("input").onkeypress = function(event){
                 if (event.keyCode == 13 || event.which == 13){
