@@ -2,7 +2,8 @@
 
 :root {
   --font: 'Source Code Pro';
-  --txt: white
+  --txt: white;
+  --size: 16px;
 }
 
 html {
@@ -11,11 +12,13 @@ html {
 
 p {
   font-family: var(--font);
+  font-size: var(--size);
   color: var(--txt);
 }
 
 input {
   font-family: var(--font);
+  font-size: var(--size);
   border: none;
   color: var(--txt);
   background-color: black;
