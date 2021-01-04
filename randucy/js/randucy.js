@@ -8,10 +8,19 @@ function newUserLine () {
   document.querySelector('#output').insertBefore(newLineElement, parent);
 }
 
+
+
+function runFunction() {
+  if (input.value == 'ping') {
+    ping();
+  }
+}
+
 document.getElementById("input").onkeypress = function(event){
                 if (event.keyCode == 13 || event.which == 13){
+                    console.log('>' + ' ' + input.value)
                     newUserLine();
-                    console.log(input.value)
+                    runFunction();
                     window.scrollTo(0,document.body.scrollHeight);
                     document.querySelector('#input').value = '';
                 }
