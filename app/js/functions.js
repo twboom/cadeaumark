@@ -26,6 +26,14 @@ function runFunction() {
       logout();
       break
 
+    case 'find':
+      find();
+      break
+
+    case 'clue':
+      clue();
+      break
+
     default:
       newCmdNotFoundLine('Markinal:' + ' ' + 'Command not found' + ' ' + input.value);
   }
