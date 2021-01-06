@@ -22,6 +22,7 @@ input {
   border: none;
   color: var(--txt);
   background-color: black;
+  width: 95vw;
 }
 
 input:focus {
