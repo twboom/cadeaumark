@@ -1,11 +1,13 @@
 // find <nr> [check if clues are unlocked]
 // clue <nr> <validator> = unlocks clue
 // clue list = list clues
-var clue1state = true;
-var clue2state = true;
+var args;
+
+var clue1state = false;
+var clue2state = false;
 var clue3state = false;
-var clue4state = true;
-var clue5state = true;
+var clue4state = false;
+var clue5state = false;
 var clue6state = false;
 
 
@@ -14,11 +16,15 @@ function find() {
 };
 
 function clue() {
-  let args = input.value.slice(4).trim().split(/ +/g)
+  args = input.value.slice(4).trim().split(/ +/g)
   console.log(args)
 
-  if (args == 'list') {
+  if (args[0] == 'list') {
     printClueList();
+  }
+
+  if (args[0] == 'unlock') {
+    unlockClue();
   }
 }
 
@@ -69,4 +75,92 @@ function printClueList() {
   else if (clue6state == false) {
     newCommandLine(clue6.name + ':' + ' ' + 'is locked')
   }
+}
+
+function unlockClue() {
+  clueNumber = args[1];
+  pass = input.value.slice(13).trim()
+  console.log('cluenumber: ' + clueNumber);
+  console.log('pass: ' + pass)
+
+  var clueName = 'clueName';
+  var clueDescription = 'clueDescription';
+  var quizAnswer = 'quizAnswer';
+  var clueState = 'clueState';
+
+  if (clueNumber == undefined) {
+    newCommandLine('Usage:')
+    newCommandLine('clue unlock <clueNumber> <quizAnswer>')
+    return
+  }
+
+  if (pass == '') {
+    newCommandLine('Usage:')
+    newCommandLine('clue unlock <clueNumber> <quizAnswer>')
+    return
+  }
+
+  if (clueNumber == '1') {
+    clueName = clue1.name;
+    clueDescription = clue1.description;
+    quizAnswer = quiz1.answer;
+    clueState = clue1state;
+  }
+
+  if (clueNumber == '2') {
+    clueName = clue2.name;
+    clueDescription = clue2.description;
+    quizAnswer = quiz2.answer;
+    clueState = clue2state;
+  }
+
+  if (clueNumber == '3') {
+    clueName = clue3.name;
+    clueDescription = clue3.descripton;
+    quizAnswer = quiz3.answer;
+    clueState = clue3state;
+  }
+
+  if (clueNumber == '4') {
+    clueName = clue4.name;
+    clueDescription = clue4.descripton;
+    quizAnswer = quiz4.answer;
+    clueState = clue4state;
+  }
+
+  if (clueNumber == '5') {
+    clueName = clue5.name;
+    clueDescription = clue5.descripton;
+    quizAnswer = quiz5.answer;
+    clueState = clue5state;
+  }
+
+  if (clueNumber == '6') {
+    clueName = clue6.name;
+    clueDescription = clue6.descripton;
+    quizAnswer = quiz6.answer;
+    clueState = clue6state;
+  }
+
+  console.log(clueName)
+  console.log(clueDescription)
+  console.log(quizAnswer)
+  console.log(clueState)
+  console.log(clueNumber)
+//
+  if (clueNumber !== undefined) {
+    if (clueState == false) {
+      if (pass == quizAnswer) {
+        newCommandLine('unlocked')
+      }
+      if (pass !== quizAnswer) {
+        newCommandLine('Wrong answer')
+      }
+    }
+
+    else if (clueState == true) {
+      newCommandLine(clueName + ':' + ' ' + 'is already unlocked')
+      newCommandLine(clueName + ':' + ' ' + clueDescription)
+    }
+  };
 }
