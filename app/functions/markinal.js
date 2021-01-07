@@ -5,11 +5,6 @@ function ping () { // ping
         newCommandLine('pong')
 }
 
-function help() { // help
-  newCommandLine('help no')
-  newCommandLine('jk')
-};
-
 function login() { // login <uname> <password>
   let args = input.value.slice(5).trim().split(/ +/g);
   console.log(args)
