@@ -18,6 +18,10 @@ function login() { // login <uname> <password>
     newCommandLine('login succes')
     loginState = true
   }
+
+  else if (args[0] !== 'mark' && args[1] !== 'boompie123') {
+    newCommandLine('wrong login cridentials')
+  }
 }
 
 function logout() {
