@@ -29,7 +29,7 @@ function newCmdNotFoundLine(cmdNotFound) {
 }
 
 document.getElementById("input").onkeypress = function(event){
-                if (event.keyCode == 13 || event.which == 13){
+                if (event.code === 'Enter'){
                     newUserLine();
                     runFunction();
                     window.scrollTo(0,document.body.scrollHeight);

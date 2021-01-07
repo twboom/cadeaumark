@@ -4,5 +4,6 @@ function help() {
   newCommandLine('login: Logging in in Markinal, usage: [login <username> <password>]')
   newCommandLine('logout: Logs you out of Markinal')
   newCommandLine('clue list: Lists the clues')
-  newCommandLine('clue <clueNumber> <quizAnswer>')
+  newCommandLine('clue unlock: unlocks the clue, usage [clue unlock <clueNumber> <quiz answer>]')
+  newCommandLine('-----------------::-----------------')
 }
