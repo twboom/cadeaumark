@@ -11,13 +11,8 @@ var clue5state = false;
 var clue6state = false;
 
 
-function find() {
-
-};
-
 function clue() {
   args = input.value.slice(4).trim().split(/ +/g)
-  console.log(args)
 
   if (args[0] == 'list') {
     printClueList();
@@ -80,8 +75,6 @@ function printClueList() {
 function unlockClue() {
   clueNumber = args[1];
   pass = input.value.slice(13).trim()
-  console.log('cluenumber: ' + clueNumber);
-  console.log('pass: ' + pass)
 
   var clueName = 'clueName';
   var clueDescription = 'clueDescription';
@@ -142,15 +135,36 @@ function unlockClue() {
     clueState = clue6state;
   }
 
-  console.log(clueName)
-  console.log(clueDescription)
-  console.log(quizAnswer)
-  console.log(clueState)
-  console.log(clueNumber)
 //
   if (clueNumber !== undefined) {
     if (clueState == false) {
       if (pass == quizAnswer) {
+
+        if (clueNumber == '1') {
+          clue1state = true;
+        };
+
+        if (clueNumber == '2') {
+          clue2state = true;
+        };
+
+        if (clueNumber == '3') {
+          clue3state = true;
+        };
+
+        if (clueNumber == '4') {
+          clue4state = true;
+        };
+
+        if (clueNumber == '5') {
+          clue5state = true;
+        };
+
+        if (clueNumber == '6') {
+          clue6state = true;
+        };
+
+
         newCommandLine('unlocked')
       }
       if (pass !== quizAnswer) {
