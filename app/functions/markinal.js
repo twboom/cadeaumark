@@ -1,5 +1,5 @@
 var input = document.querySelector('#input');
-var loginState = true
+var loginState = false
 
 function ping () { // ping
         newCommandLine('pong')

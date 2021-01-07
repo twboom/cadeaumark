@@ -3,7 +3,7 @@ function runFunction() {
   let args = input.value.slice(0).trim().split(/ +/g);
   let command = args.shift().toLowerCase();
 
-  if (loginState == false && command !== 'login' && command !== 'logout') {
+  if (loginState == false && command !== 'login' && command !== 'logout' && command !== 'help') {
     newCommandLine("You aren't logged in.")
     newCommandLine('login <username> <password>')
     return
