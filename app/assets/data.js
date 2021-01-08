@@ -1,11 +1,11 @@
 const clue1 = {name: 'Clue 1', description: 'Hier stond voorheen je verlichte naamgenoot'};
 const clue2 = {name: 'Clue 2', description: 'Hier haal jij meestal wat lekkers'};
 const clue3 = {name: 'Clue 3', description: 'Hier mag van jou niemand komen'};
-const clue4 = {name: 'Clue 4', description: 'clue 4 text'};
+const clue4 = {name: 'Clue 4', description: 'Hier snakken de konijnen naar'};
 const clue5 = {name: 'Clue 5', description: 'clue 5 text'};
 const clue6 = {name: 'Clue 6', description: 'clue 6 text'};
 
-const quiz1 = {name: 'HTTP Response Status Code', description: 'quiz 1 desc', answer: 'quiz 1 ans'};
+const quiz1 = {name: 'HTTP Response Status Code', description: 'quiz 1 desc', answer: 'NMIIA1301408511410100'};
 const quiz2 = {name: 'Duitse Filippine', description: 'quiz 2 desc', answer: 'markeuaw'};
 const quiz3 = {name: 'quiz 3', description: 'quiz 3 desc', answer: 'quiz 3 ans'};
 const quiz4 = {name: 'quiz 4', description: 'quiz 4 desc', answer: 'quiz 4 ans'};
