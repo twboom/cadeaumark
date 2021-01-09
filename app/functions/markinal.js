@@ -14,12 +14,12 @@ function login() { // login <uname> <password>
     newCommandLine('usage: login <username> <password>')
   }
 
-  if (args[0] === 'mark' && args[1] === 'boompie123') {
+  if (args[0] === 'mark' && args[1] === 'rover') {
     newCommandLine('login succes')
     loginState = true
   }
 
-  else if (args[0] !== 'mark' && args[1] !== 'boompie123') {
+  else if (args[0] !== 'mark' && args[1] !== 'rover') {
     newCommandLine('wrong login cridentials')
   }
 }

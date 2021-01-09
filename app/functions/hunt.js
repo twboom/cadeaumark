@@ -9,6 +9,7 @@ var clue3state = false;
 var clue4state = false;
 var clue5state = false;
 var clue6state = false;
+var clue7state = false;
 
 const lockedText = ': is locked';
 
@@ -72,6 +73,13 @@ function printClueList() {
   else if (clue6state == false) {
     newCommandLine(clue6.name + lockedText)
   }
+
+  if (clue7state == true) {
+    newCommandLine(clue7.name + ':' + ' ' + clue7.description)
+  }
+  else if (clue6state == false) {
+    newCommandLine(clue7.name + lockedText)
+  }
 }
 
 function unlockClue() {
@@ -130,6 +138,13 @@ function unlockClue() {
     clueState = clue6state;
   }
 
+  if (clueNumber == '7') {
+    clueName = clue7.name;
+    clueDescription = clue7.descripton;
+    quizAnswer = quiz6.answer;
+    clueState = clue7state;
+  }
+
 //
   if (clueNumber !== undefined) {
     if (clueState == false) {
@@ -157,6 +172,10 @@ function unlockClue() {
 
         if (clueNumber == '6') {
           clue6state = true;
+        };
+
+        if (clueNumber == '7') {
+          clue7state = true;
         };
 
 
