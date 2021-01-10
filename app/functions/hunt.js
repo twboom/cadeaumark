@@ -77,7 +77,7 @@ function printClueList() {
   if (clue7state == true) {
     newCommandLine(clue7.name + ':' + ' ' + clue7.description)
   }
-  else if (clue6state == false) {
+  else if (clue7state == false) {
     newCommandLine(clue7.name + lockedText)
   }
 }
